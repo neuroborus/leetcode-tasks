@@ -1,4 +1,3 @@
 function mySqrt(x: number): number {
-
-    return 0;
+  return 0;
 }

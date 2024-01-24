@@ -1,12 +1,10 @@
-import {_debug, _error, _log} from "./logger";
+import { _compare, _debug, _error, _log } from "./logger";
 
-console.log('Started!');
+console.log("Started!");
 
-_log('LOG');
-_debug('DEBUG');
-_error('ERROR');
+_log("LOG");
+_debug("DEBUG");
+_error("ERROR");
+_compare("The cat sat on the mat.", "The mat sat on the cat.");
 
-const message = "This is a message with " + "\x1b[31mred\x1b[0m" + " and " + "\x1b[34mblue\x1b[0m" + " colors.";
-console.log(message);
-
-console.log('Ended!');
+console.log("Ended!");
