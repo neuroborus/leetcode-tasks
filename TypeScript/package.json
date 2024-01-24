@@ -1,0 +1,38 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc -p tsconfig.json",
+    "start:index": "node ./dist/index.js",
+    "start": "npm run clean && npm run build && npm run start:index",
+
+    "easy:index": "npx ts-node src/index.ts",
+    "easy:roman": "npx ts-node src/easy/roman-to-integer.ts",
+    "easy:two-sums": "npx ts-node src/easy/two-sums.ts",
+    "easy:palindrome-number": "npx ts-node src/easy/palindrome-number.ts",
+    "easy:longest-common-prefix": "npx ts-node src/easy/longest-common-prefix.ts",
+    "easy:valid-parenteses": "npx ts-node src/easy/valid-parenteses.ts",
+    "easy:merge-two-sorted-lists": "npx ts-node src/easy/merge-two-sorted-lists.ts",
+    "easy:remove-dups-from-sorted-array": "npx ts-node src/easy/remove-dups-from-sorted-array.ts",
+    "easy:remove-element": "npx ts-node src/easy/remove-element.ts",
+    "easy:first-occurrence": "npx ts-node src/easy/first-occurrence.ts",
+    "easy:search-insert-position": "npx ts-node src/easy/search-insert-position.ts",
+    "easy:length-of-last-word": "npx ts-node src/easy/length-of-last-word.ts",
+    "easy:plus-one": "npx ts-node src/easy/plus-one.ts",
+    "easy:add-binary": "npx ts-node src/easy/add-binary.ts",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "rimraf": "^5.0.5"
+  }
+}
