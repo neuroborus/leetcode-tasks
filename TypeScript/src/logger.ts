@@ -1,16 +1,19 @@
 export function _log(message: unknown) {
-  console.log("\x1b[36m%s\x1b[0m", message); //cyan
+  console.log("\x1b[33m%s\x1b[0m", message); //yellow
 }
 
 export function _debug(message: unknown) {
-  console.debug("\x1b[33m%s\x1b[0m", message); //yellow
+  console.debug("\x1b[36m%s\x1b[0m", message); //cyan
 }
 
 export function _error(message: unknown) {
   console.error("\x1b[31m%s\x1b[0m", message); //red
 }
 
-export function _compare(first: string | object, second: string | object) {
+export function _compare(
+  first: string | number | object,
+  second: string | number | object
+) {
   const str1 = first.toString();
   const str2 = second.toString();
 

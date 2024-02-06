@@ -7,7 +7,7 @@ import { _compare, _debug, _error, _log } from "../logger";
     return (a10 + b10).toString(2);
 }*/ //
 
-function addBinary(a: string, b: string): string {
+function addBinaryArr(a: string, b: string): string {
   let arrA: string[] = Array.from(a);
   let arrB: string[] = Array.from(b);
 
@@ -17,7 +17,7 @@ function addBinary(a: string, b: string): string {
     arrB = tmp;
   }
 
-  const result: string[] = arrA;
+  const result: string[] = arrA; // pointer
 
   const minLength = arrB.length;
 
@@ -67,7 +67,64 @@ function addBinary(a: string, b: string): string {
   return result.join("");
 }
 
-_log(addBinary("11", "1"));
+function addBinary(a: string, b: string): string {
+  if (a.length < b.length) {
+    const tmp = a;
+    a = b;
+    b = tmp;
+  }
+
+  const result: string[] = Array.from(a);
+
+  const minLength = b.length;
+
+  let deep = 0;
+  while (minLength - deep > 0) {
+    const aInd = a.length - 1 - deep;
+    const bInd = b.length - 1 - deep;
+
+    let c = 0;
+    do {
+      if (aInd - c < 0) {
+        result.unshift("1");
+        c = 0;
+        break;
+      }
+      const sideStep = c ? 1 : 0;
+
+      let smallInd = +b.charAt(bInd) - c;
+      smallInd = smallInd < 0 ? 0 : smallInd;
+
+      switch (+a.charAt(aInd - c) + smallInd + sideStep) {
+        case 0:
+          c = 0;
+          break;
+        case 1:
+          result[aInd - c] = "1";
+          c = 0;
+          break;
+        case 2:
+          result[aInd - c] = "0";
+          ++c;
+          break;
+        case 3:
+          result[aInd - c] = "1";
+          ++c;
+          break;
+        default:
+          _error(`Unexpected behavior:
+                     sw=${+a.charAt(aInd - c) + smallInd + sideStep},
+                     c=${c},
+                     deep=${deep}`);
+          return "";
+      }
+    } while (c);
+    ++deep;
+  }
+  return result.join("");
+}
+
+/*_log(addBinary("11", "1"));
 _log(addBinary("1010", "1011"));
 
 const complex = addBinary(
@@ -78,3 +135,6 @@ const answer =
   "110111101100010011000101110110100000011101000101011001000011011000001100011110011010010011000000000";
 _debug(complex === answer);
 _compare(answer, complex);
+_compare("1000", addBinary("1", "111"));*/
+_compare("11110", addBinary("1111", "1111"));
+_compare("11110", addBinaryArr("1111", "1111"));
