@@ -24,6 +24,7 @@
     "easy:length-of-last-word": "npx ts-node src/easy/length-of-last-word.ts",
     "easy:plus-one": "npx ts-node src/easy/plus-one.ts",
     "easy:add-binary": "npx ts-node src/easy/add-binary.ts",
+    "easy:sqrt": "npx ts-node src/easy/sqrt.ts",
 
     "test": "echo \"Error: no test specified\" && exit 1"
   },

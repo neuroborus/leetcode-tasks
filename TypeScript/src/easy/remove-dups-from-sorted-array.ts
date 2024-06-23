@@ -1,4 +1,4 @@
-import { _log } from "../logger";
+import { _compare } from "../logger";
 
 function removeDuplicates(nums: number[]): number {
   let dups = 0;
@@ -20,8 +20,14 @@ function removeDuplicates(nums: number[]): number {
   return dups;
 }
 
-const nums1 = [1, 1, 2];
-_log(removeDuplicates(nums1) + "\t" + JSON.stringify(nums1));
+// todo
 
-const nums2 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
-_log(removeDuplicates(nums2) + "\t" + JSON.stringify(nums2));
+const nums1 = [1, 1, 2];
+const got1 = removeDuplicates(nums1) + "\t" + JSON.stringify(nums1);
+const expected1 = "2" + "\t" + JSON.stringify([1, 2]);
+_compare(expected1, got1);
+
+const nums2 = [0, 1, 2, 3, 4];
+const got2 = removeDuplicates(nums2) + "\t" + JSON.stringify(nums2);
+const expected2 = "5" + "\t" + JSON.stringify([1, 2]);
+_compare(expected2, got2);
