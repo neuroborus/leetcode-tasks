@@ -26,6 +26,9 @@
     "easy:add-binary": "npx ts-node src/easy/add-binary.ts",
     "easy:sqrt": "npx ts-node src/easy/sqrt.ts",
 
+    "medium:top-k-frequent-elements": "npx ts-node src/medium/top-k-frequent-elements.ts",
+    "kth-largest-element-in-an-array": "npx ts-node src/medium/kth-largest-element-in-an-array.ts",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
