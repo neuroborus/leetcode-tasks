@@ -28,8 +28,14 @@
 
     "medium:top-k-frequent-elements": "npx ts-node src/medium/top-k-frequent-elements.ts",
     "medium:kth-largest-element-in-an-array": "npx ts-node src/medium/kth-largest-element-in-an-array.ts",
-    "medium:maximum_sum_of_distinct_subarrays_with_length_k": "npx ts-node src/medium/maximum_sum_of_distinct_subarrays_with_length_k.ts",
-    "medium:longest_substring_without_repeating_characters": "npx ts-node src/medium/longest_substring_without_repeating_characters.ts",
+    "medium:maximum_sum_of_distinct_subarrays_with_length_k": "npx ts-node src/medium/maximum-sum-of-distinct-subarrays-with-length-k.ts",
+    "medium:longest_substring_without_repeating_characters": "npx ts-node src/medium/longest-substring-without-repeating-characters.ts",
+    "medium:combination-sum": "npx ts-node src/medium/combination-sum.ts",
+    "medium:longest-palindromic-substring": "npx ts-node src/medium/longest-palindromic-substring.ts",
+
+    "alghorithms:quicksort": "npx ts-node src/algorithms/quicksort.ts",
+    "alghorithms:mergesort": "npx ts-node src/algorithms/mergesort.ts",
+
 
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -41,7 +41,7 @@ export function _compare(
   }
 
   const borderArr: string[] = [];
-  const borderLength = Math.max(frm1.length, frm2.length);
+  const borderLength = Math.max(frm1.length, frm2.length) + 4;
   for (let i = 0; i < borderLength; ++i) {
     borderArr.push("*");
   }
