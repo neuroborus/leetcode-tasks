@@ -1,4 +1,4 @@
-import { _compare, _debug } from "../logger";
+import { _compare } from "../logger";
 
 function myLengthOfLongestSubstring(s: string): number {
   let alreadyBeen: Map<string, number> = new Map(); // element - index
