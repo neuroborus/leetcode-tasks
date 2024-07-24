@@ -11,8 +11,8 @@ export function _error(message: unknown) {
 }
 
 export function _compare(
-  first: string | number | object,
-  second: string | number | object
+  first: string | number | boolean | object,
+  second: string | number | boolean | object
 ) {
   const str1 = first.toString();
   const str2 = second.toString();

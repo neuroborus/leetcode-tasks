@@ -32,6 +32,9 @@
     "medium:longest_substring_without_repeating_characters": "npx ts-node src/medium/longest-substring-without-repeating-characters.ts",
     "medium:combination-sum": "npx ts-node src/medium/combination-sum.ts",
     "medium:longest-palindromic-substring": "npx ts-node src/medium/longest-palindromic-substring.ts",
+    "medium:validate-binary-search-tree": "npx ts-node src/medium/validate-binary-search-tree.ts",
+    "medium:binary-tree-level-observer-travesal": "npx ts-node src/medium/binary-tree-level-observer-travesal.ts",
+
 
     "alghorithms:quicksort": "npx ts-node src/algorithms/quicksort.ts",
     "alghorithms:mergesort": "npx ts-node src/algorithms/mergesort.ts",
