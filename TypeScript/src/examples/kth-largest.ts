@@ -10,6 +10,7 @@ function findKthLargest(nums: number[], k: number): number {
   }
 
   while (min <= max) {
+    // type of binary search
     const average = Math.floor((max + min) / 2);
     let greater = 0;
     let equal = 0;

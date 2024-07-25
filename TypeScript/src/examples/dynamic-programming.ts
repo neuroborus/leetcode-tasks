@@ -5,10 +5,9 @@ function longestPalindrome(str: string): string {
 
   let maxLength = 1;
   let startInd = 0;
-  let lowBorder, highBorder;
   for (let i = 0; i < str.length; i++) {
-    lowBorder = i - 1;
-    highBorder = i + 1;
+    let lowBorder = i - 1;
+    let highBorder = i + 1;
     while (highBorder < str.length && str[highBorder] === str[i]) {
       highBorder++;
     }
