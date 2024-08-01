@@ -38,6 +38,7 @@
 
     "alghorithms:quicksort": "npx ts-node src/algorithms/quicksort.ts",
     "alghorithms:mergesort": "npx ts-node src/algorithms/mergesort.ts",
+    "alghorithms:dijkstra": "npx ts-node src/algorithms/dijkstra.ts",
 
 
     "test": "echo \"Error: no test specified\" && exit 1"

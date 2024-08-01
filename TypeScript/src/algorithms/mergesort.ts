@@ -16,37 +16,37 @@ function merge(
   // Merge the temp arrays back into arr[leftIndex..rightIndex]
 
   // Initial index of first subarray
-  let i = 0;
+  let leftInd = 0;
   // Initial index of second subarray
-  let j = 0;
+  let rightInd = 0;
   // Initial index of merged subarray
-  let k = leftIndex;
+  let arrInd = leftIndex;
 
-  while (i < lengthLeft && j < lengthRight) {
-    if (leftArr[i] <= rightArr[j]) {
-      arr[k] = leftArr[i];
-      i++;
+  while (leftInd < lengthLeft && rightInd < lengthRight) {
+    if (leftArr[leftInd] <= rightArr[rightInd]) {
+      arr[arrInd] = leftArr[leftInd];
+      leftInd++;
     } else {
-      arr[k] = rightArr[j];
-      j++;
+      arr[arrInd] = rightArr[rightInd];
+      rightInd++;
     }
-    k++;
+    arrInd++;
   }
 
   // Copy the remaining elements of
   // leftArr[], if there are any
-  while (i < lengthLeft) {
-    arr[k] = leftArr[i];
-    i++;
-    k++;
+  while (leftInd < lengthLeft) {
+    arr[arrInd] = leftArr[leftInd];
+    leftInd++;
+    arrInd++;
   }
 
   // Copy the remaining elements of
   // rightArr[], if there are any
-  while (j < lengthRight) {
-    arr[k] = rightArr[j];
-    j++;
-    k++;
+  while (rightInd < lengthRight) {
+    arr[arrInd] = rightArr[rightInd];
+    rightInd++;
+    arrInd++;
   }
 }
 
