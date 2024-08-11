@@ -31,14 +31,14 @@ function dijkstra(
   edges: Map<string, Map<string, number>>
 ): Map<string, number> {
   // Init
-  const distances: Map<string, number> = new Map();
+  const minDistances: Map<string, number> = new Map();
   const visited: Set<string> = new Set();
   const priorityQueue: { vertex: string; distance: number }[] = [];
 
   for (const vertex of vertices) {
-    distances.set(vertex, Infinity);
+    minDistances.set(vertex, Infinity);
   }
-  distances.set(start, 0);
+  minDistances.set(start, 0);
   priorityQueue.push({ vertex: start, distance: 0 });
   //
 
@@ -55,8 +55,8 @@ function dijkstra(
     // Update distance to the nearest vertices
     for (const [neighbor, weight] of edges.get(currentVertex)!) {
       const newDistance = currentDistance + weight;
-      if (newDistance < (distances.get(neighbor) || Infinity)) {
-        distances.set(neighbor, newDistance);
+      if (newDistance < (minDistances.get(neighbor) || Infinity)) {
+        minDistances.set(neighbor, newDistance);
         priorityQueue.push({ vertex: neighbor, distance: newDistance });
         // Sort queue by distance
         priorityQueue.sort((a, b) => a.distance - b.distance);
@@ -64,7 +64,7 @@ function dijkstra(
     }
   }
 
-  return distances;
+  return minDistances;
 }
 
 function createGraph() {

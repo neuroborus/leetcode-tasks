@@ -6,29 +6,30 @@ function longestPalindrome(str: string): string {
   let maxLength = 1;
   let startInd = 0;
   for (let i = 0; i < str.length; i++) {
-    let lowBorder = i - 1;
-    let highBorder = i + 1;
-    while (highBorder < str.length && str[highBorder] === str[i]) {
-      highBorder++;
+    let leftBorder = i - 1;
+    let rightBorder = i + 1;
+
+    while (rightBorder < str.length && str[rightBorder] === str[i]) {
+      rightBorder++;
     }
 
-    while (lowBorder >= 0 && str[lowBorder] === str[i]) {
-      lowBorder--;
+    while (leftBorder >= 0 && str[leftBorder] === str[i]) {
+      leftBorder--;
     }
 
     while (
-      lowBorder >= 0 &&
-      highBorder < str.length &&
-      str[lowBorder] === str[highBorder]
+      leftBorder >= 0 &&
+      rightBorder < str.length &&
+      str[leftBorder] === str[rightBorder]
     ) {
-      lowBorder--;
-      highBorder++;
+      leftBorder--;
+      rightBorder++;
     }
 
-    const length = highBorder - lowBorder - 1;
+    const length = rightBorder - leftBorder - 1;
     if (maxLength < length) {
       maxLength = length;
-      startInd = lowBorder + 1;
+      startInd = leftBorder + 1;
     }
   }
   return str.slice(startInd, startInd + maxLength);
