@@ -1,4 +1,4 @@
-import { _compare } from "../logger";
+import { _compare, _log } from "../logger";
 
 /*
  * Dynamic Programming is an approach
@@ -13,12 +13,16 @@ import { _compare } from "../logger";
  * In how many distinct ways can you climb to the top?
  * */
 
-function countWays(n: number, dp: number[]) {
+function countWays(n: number, dp: number[]): number {
+  // If only one stair - here is only 1 way
   if (n <= 1) return (dp[n] = 1);
 
+  // If result fo n already exists - use it
   if (dp[n] != -1) {
     return dp[n];
   }
+
+  // Return sum of ways
   dp[n] = countWays(n - 1, dp) + countWays(n - 2, dp);
   return dp[n];
 }
@@ -30,3 +34,4 @@ function climbStairs(n: number): number {
 
 _compare(2, climbStairs(2));
 _compare(3, climbStairs(3));
+_log(climbStairs(50));
