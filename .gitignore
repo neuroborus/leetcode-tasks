@@ -1,3 +1,5 @@
+change-script.sh
+
 # compiled output
 /**/dist
 /**/node_modules
