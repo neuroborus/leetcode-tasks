@@ -1,12 +1,6 @@
 import { _compare } from "../logger";
 
 /*
- * Dynamic Programming is an approach
- * that involves creating subtasks of a general task
- * and reusing their results.
- * */
-
-/*
  * You are climbing a staircase.
  * It takes n steps to reach the top.
  * Each time you can either climb 1 or 2 steps.

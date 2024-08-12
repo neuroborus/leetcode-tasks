@@ -1,5 +1,11 @@
 import { _compare } from "../logger";
 
+/*
+ * Backtracking is an approach
+ * that involves going through all possible variants,
+ * discarding incorrect ones based on their partial construction.
+ * */
+
 function backtrack(
   candidates: number[],
   target: number,
