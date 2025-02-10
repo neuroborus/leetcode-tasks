@@ -1,4 +1,4 @@
-import { _log } from "../../../logger";
+import { _log } from '@/logger';
 
 function searchInsert(nums: number[], target: number): number {
   for (let i = 0; i < nums.length; ++i) {

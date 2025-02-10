@@ -1,4 +1,4 @@
-import { _compare } from "../logger";
+import { _compare } from '@/logger';
 
 // Function to partition the array and return the partition index
 function partition(arr: number[], startInd: number, endInd: number) {

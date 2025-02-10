@@ -1,15 +1,15 @@
-import { _log } from "../../../logger";
+import { _log } from '@/logger';
 
 const mappingOpenToClose: Record<string, string> = {
-  "(": ")",
-  "{": "}",
-  "[": "]",
+  '(': ')',
+  '{': '}',
+  '[': ']',
 };
 
 const mappingCloseToOpen: Record<string, string> = {
-  ")": "(",
-  "}": "{",
-  "]": "[",
+  ')': '(',
+  '}': '{',
+  ']': '[',
 };
 
 function isValid(s: string): boolean {
@@ -27,6 +27,6 @@ function isValid(s: string): boolean {
   return !waitingFor.length;
 }
 
-_log(isValid("()"));
-_log(isValid("()[]{}"));
-_log(isValid("(]"));
+_log(isValid('()'));
+_log(isValid('()[]{}'));
+_log(isValid('(]'));

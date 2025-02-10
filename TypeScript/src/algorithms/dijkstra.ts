@@ -17,7 +17,7 @@ class Graph {
   addEdge(source: string, destination: string, weight: number): void {
     if (!this._vertices.has(source) || !this._vertices.has(destination)) {
       throw new Error(
-        "Both vertices must be added to the graph before adding an edge."
+        'Both vertices must be added to the graph before adding an edge.'
       );
     }
     this.edges.get(source)?.set(destination, weight);
@@ -69,24 +69,24 @@ function dijkstra(
 
 function createGraph() {
   const graph = new Graph();
-  graph.addVertex("A");
-  graph.addVertex("B");
-  graph.addVertex("C");
-  graph.addVertex("D");
-  graph.addVertex("E");
+  graph.addVertex('A');
+  graph.addVertex('B');
+  graph.addVertex('C');
+  graph.addVertex('D');
+  graph.addVertex('E');
 
-  graph.addEdge("A", "B", 1);
-  graph.addEdge("A", "C", 4);
-  graph.addEdge("B", "C", 2);
-  graph.addEdge("B", "D", 5);
-  graph.addEdge("C", "D", 1);
-  graph.addEdge("D", "E", 3);
+  graph.addEdge('A', 'B', 1);
+  graph.addEdge('A', 'C', 4);
+  graph.addEdge('B', 'C', 2);
+  graph.addEdge('B', 'D', 5);
+  graph.addEdge('C', 'D', 1);
+  graph.addEdge('D', 'E', 3);
 
   return graph;
 }
 
 const graph = createGraph();
-const distances = dijkstra("A", graph.vertices, graph.edges);
+const distances = dijkstra('A', graph.vertices, graph.edges);
 for (const [vertex, distance] of distances) {
   console.log(`Distance from A to ${vertex} is ${distance}`);
 }

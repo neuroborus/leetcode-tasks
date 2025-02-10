@@ -1,4 +1,4 @@
-import { _log } from "../../../logger";
+import { _log } from '@/logger';
 
 function strStr(haystack: string, needle: string): number {
   const r = new RegExp(needle);
@@ -7,5 +7,5 @@ function strStr(haystack: string, needle: string): number {
   return -1;
 }
 
-_log(strStr("sadbutsad", "sad"));
-_log(strStr("leetcode", "leeto"));
+_log(strStr('sadbutsad', 'sad'));
+_log(strStr('leetcode', 'leeto'));

@@ -11,7 +11,7 @@
  * Column number is blocker issue id.
  */
 
-import { _compare } from "../logger";
+import { _compare } from '@/logger';
 // I (BLOCKERS) -> J (BLOCKED)
 const inputOne = [
   //(j0)1 (j1)2 (j2)3
@@ -164,10 +164,10 @@ _compare(
 
 const resultTwo = detectCycles(inputTwo);
 _compare(
-  outputTwo.length ? outputTwo : "empty",
+  outputTwo.length ? outputTwo : 'empty',
   resultTwo.length
     ? Array.from(new Set(resultTwo.flatMap((el) => el).sort(sorter)))
-    : "empty"
+    : 'empty'
 );
 
 _compare(

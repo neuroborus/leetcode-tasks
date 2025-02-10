@@ -1,4 +1,4 @@
-import { _log } from "../../../logger";
+import { _log } from '@/logger';
 
 function twoSum(nums: number[], target: number): number[] {
   const i = 0;

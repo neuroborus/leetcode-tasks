@@ -1,4 +1,4 @@
-import { _log } from "../../../logger";
+import { _log } from '@/logger';
 
 const mapping: Record<string, number> = {
   I: 1,
@@ -22,7 +22,7 @@ const mappingDuos: Record<string, number> = {
 function broker(arr: string[]): number {
   let sum = 0;
   const duosEntries = Object.entries(mappingDuos);
-  let prev = "";
+  let prev = '';
   let prevVal = 0;
   for (let i = 0; i < arr.length; ++i) {
     if (prev && duosEntries.find((el) => el[0] === `${prev}${arr[i]}`)) {
@@ -42,6 +42,6 @@ function romanToInt(s: string): number {
   return broker(Array.from(s));
 }
 
-_log(romanToInt("III"));
-_log(romanToInt("LVIII"));
-_log(romanToInt("MCMXCIV"));
+_log(romanToInt('III'));
+_log(romanToInt('LVIII'));
+_log(romanToInt('MCMXCIV'));

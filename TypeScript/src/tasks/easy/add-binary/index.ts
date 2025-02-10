@@ -1,4 +1,4 @@
-import { _compare, _debug, _error, _log } from "../../../logger";
+import { _compare, _debug, _error, _log } from '@/logger';
 
 /*function index(a: string, b: string): string {
     const a10: number = parseInt(a, 2);
@@ -29,7 +29,7 @@ function addBinaryArr(a: string, b: string): string {
     let c = 0;
     do {
       if (aInd - c < 0) {
-        result.unshift("1");
+        result.unshift('1');
         c = 0;
         break;
       }
@@ -43,15 +43,15 @@ function addBinaryArr(a: string, b: string): string {
           c = 0;
           break;
         case 1:
-          result[aInd - c] = "1";
+          result[aInd - c] = '1';
           c = 0;
           break;
         case 2:
-          result[aInd - c] = "0";
+          result[aInd - c] = '0';
           ++c;
           break;
         case 3:
-          result[aInd - c] = "1";
+          result[aInd - c] = '1';
           ++c;
           break;
         default:
@@ -59,12 +59,12 @@ function addBinaryArr(a: string, b: string): string {
                      sw=${+arrA[aInd - c] + smallInd + sideStep},
                      c=${c},
                      deep=${deep}`);
-          return "";
+          return '';
       }
     } while (c);
     ++deep;
   }
-  return result.join("");
+  return result.join('');
 }
 
 function index(a: string, b: string): string {
@@ -86,7 +86,7 @@ function index(a: string, b: string): string {
     let c = 0;
     do {
       if (aInd - c < 0) {
-        result.unshift("1");
+        result.unshift('1');
         c = 0;
         break;
       }
@@ -100,15 +100,15 @@ function index(a: string, b: string): string {
           c = 0;
           break;
         case 1:
-          result[aInd - c] = "1";
+          result[aInd - c] = '1';
           c = 0;
           break;
         case 2:
-          result[aInd - c] = "0";
+          result[aInd - c] = '0';
           ++c;
           break;
         case 3:
-          result[aInd - c] = "1";
+          result[aInd - c] = '1';
           ++c;
           break;
         default:
@@ -116,12 +116,12 @@ function index(a: string, b: string): string {
                      sw=${+a.charAt(aInd - c) + smallInd + sideStep},
                      c=${c},
                      deep=${deep}`);
-          return "";
+          return '';
       }
     } while (c);
     ++deep;
   }
-  return result.join("");
+  return result.join('');
 }
 
 /*_log(index("11", "1"));
@@ -136,5 +136,5 @@ const answer =
 _debug(complex === answer);
 _compare(answer, complex);
 _compare("1000", index("1", "111"));*/
-_compare("11110", index("1111", "1111"));
-_compare("11110", addBinaryArr("1111", "1111"));
+_compare('11110', index('1111', '1111'));
+_compare('11110', addBinaryArr('1111', '1111'));

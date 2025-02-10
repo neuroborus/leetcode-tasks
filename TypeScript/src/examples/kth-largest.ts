@@ -1,4 +1,4 @@
-import { _compare } from "../logger";
+import { _compare } from '@/logger';
 
 function findKthLargest(nums: number[], k: number): number {
   let min = Number.POSITIVE_INFINITY;

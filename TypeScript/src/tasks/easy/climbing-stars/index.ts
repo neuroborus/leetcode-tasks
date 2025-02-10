@@ -1,4 +1,4 @@
-import { _compare, _log } from "../../../logger";
+import { _compare, _log } from '@/logger';
 
 /*
  * You are climbing a staircase.

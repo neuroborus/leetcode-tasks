@@ -1,4 +1,4 @@
-import { _compare } from "../logger";
+import { _compare } from '@/logger';
 
 function lengthOfLongestSubstring(s: string): number {
   if (s.length === 0) return 0;
@@ -22,9 +22,9 @@ function lengthOfLongestSubstring(s: string): number {
   return maxLength;
 }
 
-_compare(3, lengthOfLongestSubstring("abcabcbb"));
-_compare(1, lengthOfLongestSubstring("bbbbb"));
-_compare(3, lengthOfLongestSubstring("pwwkew"));
+_compare(3, lengthOfLongestSubstring('abcabcbb'));
+_compare(1, lengthOfLongestSubstring('bbbbb'));
+_compare(3, lengthOfLongestSubstring('pwwkew'));
 
-_compare(1, lengthOfLongestSubstring(" "));
-_compare(3, lengthOfLongestSubstring("dvdf"));
+_compare(1, lengthOfLongestSubstring(' '));
+_compare(3, lengthOfLongestSubstring('dvdf'));

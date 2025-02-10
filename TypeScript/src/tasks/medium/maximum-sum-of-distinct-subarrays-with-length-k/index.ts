@@ -1,4 +1,4 @@
-import { _compare } from "../../../logger";
+import { _compare } from '@/logger';
 
 function firstMaximumSubarraySum(nums: number[], k: number): number {
   let currentSum = 0;

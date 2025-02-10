@@ -1,4 +1,4 @@
-import { _compare, _log } from "../logger";
+import { _compare, _log } from '@/logger';
 
 /*
  * Dynamic Programming is an approach

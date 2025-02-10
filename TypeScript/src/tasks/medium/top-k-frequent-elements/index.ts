@@ -1,4 +1,4 @@
-import { _compare } from "../../../logger";
+import { _compare } from '@/logger';
 
 function topKFrequent(nums: number[], k: number): number[] {
   const frequents = new Map<number, number>();
@@ -19,5 +19,5 @@ function topKFrequent(nums: number[], k: number): number[] {
   return sorted.slice(0, k).map(([k, v]) => k);
 }
 
-_compare("[1,2]", `[${topKFrequent([1, 1, 1, 2, 2, 3], 2)}]`);
-_compare("[1]", `[${topKFrequent([1], 1)}]`);
+_compare('[1,2]', `[${topKFrequent([1, 1, 1, 2, 2, 3], 2)}]`);
+_compare('[1]', `[${topKFrequent([1], 1)}]`);

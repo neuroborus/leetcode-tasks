@@ -1,4 +1,4 @@
-import { _debug, _log } from "../../../logger";
+import { _debug, _log } from '@/logger';
 
 function index(digits: number[]): number[] {
   const result = digits;

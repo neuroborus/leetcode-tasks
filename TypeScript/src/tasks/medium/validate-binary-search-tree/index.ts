@@ -1,4 +1,4 @@
-import { _compare } from "../../../logger";
+import { _compare } from '@/logger';
 
 class TreeNode {
   val: number;

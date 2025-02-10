@@ -1,13 +1,13 @@
-import { _log } from "../../../logger";
+import { _log } from '@/logger';
 
 function index(strs: string[]): string {
-  let result = "";
+  let result = '';
   const minLength = strs.reduce((memory: number, item: string) => {
     return item.length < memory ? item.length : memory;
   }, Number.MAX_SAFE_INTEGER);
 
   for (let i = 0; i < minLength; ++i) {
-    let symbol = "";
+    let symbol = '';
     for (const str of strs) {
       if (!symbol) {
         symbol = str.charAt(i);
@@ -20,5 +20,5 @@ function index(strs: string[]): string {
   return result;
 }
 
-_log(index(["flower", "flow", "flight"]));
-_log(index(["dog", "racecar", "car"]));
+_log(index(['flower', 'flow', 'flight']));
+_log(index(['dog', 'racecar', 'car']));

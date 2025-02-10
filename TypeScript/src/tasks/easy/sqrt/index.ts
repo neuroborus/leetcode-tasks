@@ -1,4 +1,4 @@
-import { _compare } from "../../../logger";
+import { _compare } from '@/logger';
 
 function mySqrt(x: number): number {
   return Math.floor(index(x));

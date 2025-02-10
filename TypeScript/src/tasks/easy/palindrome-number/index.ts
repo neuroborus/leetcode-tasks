@@ -1,4 +1,4 @@
-import { _log } from "../../../logger";
+import { _log } from '@/logger';
 
 function isPalindrome(x: number): boolean {
   const str = x.toString();

@@ -1,4 +1,4 @@
-import { _compare } from "../../../logger";
+import { _compare } from '@/logger';
 
 function longestPalindrome(str: string): string {
   if (str.length < 2) return str;
@@ -35,7 +35,7 @@ function longestPalindrome(str: string): string {
   return str.slice(startInd, startInd + maxLength);
 }
 
-_compare("454", longestPalindrome("ab123454678ba"));
+_compare('454', longestPalindrome('ab123454678ba'));
 
-_compare("bab", longestPalindrome("babad"));
-_compare("bb", longestPalindrome("cbbd"));
+_compare('bab', longestPalindrome('babad'));
+_compare('bb', longestPalindrome('cbbd'));

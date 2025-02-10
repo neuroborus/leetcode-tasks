@@ -1,5 +1,5 @@
 // Definition for singly-linked list.
-import { _debug, _log } from "../../../logger";
+import { _debug, _log } from '@/logger';
 
 class ListNode {
   val: number;
