@@ -53,7 +53,7 @@ export function _compare(
     borderArr[Math.floor(borderLength / 2 - 3)] = "O";
     borderArr[Math.floor(borderLength / 2 - 2)] = "M";
     borderArr[Math.floor(borderLength / 2 - 1)] = "P";
-        borderArr[Math.floor(borderLength / 2)] = "A";
+    borderArr[Math.floor(borderLength / 2)] = "A";
     borderArr[Math.floor(borderLength / 2 + 1)] = "R";
     borderArr[Math.floor(borderLength / 2 + 2)] = "E";
   }
