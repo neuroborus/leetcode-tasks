@@ -31,9 +31,9 @@
     "medium:binary-tree-level-observer-travesal": "npx ts-node -r tsconfig-paths/register src/tasks/medium/binary-tree-level-observer-travesal",
     "medium:combination-sum": "npx ts-node -r tsconfig-paths/register src/tasks/medium/combination-sum",
     "medium:kth-largest-element-in-an-array": "npx ts-node -r tsconfig-paths/register src/tasks/medium/kth-largest-element-in-an-array",
-    "medium:longest_substring_without_repeating_characters": "npx ts-node -r tsconfig-paths/register src/tasks/medium/longest-substring-without-repeating-characters",
+    "medium:longest-substring-without-repeating-characters": "npx ts-node -r tsconfig-paths/register src/tasks/medium/longest-substring-without-repeating-characters",
     "medium:longest-palindromic-substring": "npx ts-node -r tsconfig-paths/register src/tasks/medium/longest-palindromic-substring",
-    "medium:maximum_sum_of_distinct_subarrays_with_length_k": "npx ts-node -r tsconfig-paths/register src/tasks/medium/maximum-sum-of-distinct-subarrays-with-length-k",
+    "medium:maximum-sum-of-distinct-subarrays-with-length-k": "npx ts-node -r tsconfig-paths/register src/tasks/medium/maximum-sum-of-distinct-subarrays-with-length-k",
     "medium:validate-binary-search-tree": "npx ts-node -r tsconfig-paths/register src/tasks/medium/validate-binary-search-tree",
     "medium:top-k-frequent-elements": "npx ts-node -r tsconfig-paths/register src/tasks/medium/top-k-frequent-elements",
 
