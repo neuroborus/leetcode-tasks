@@ -3,7 +3,7 @@ import {_compare} from "@/logger";
 /**
  Do not return anything, modify nums1 in-place instead.
  */
-function merge(nums1: number[], m: number, nums2: number[], n: number): void {
+function mergeNaive(nums1: number[], m: number, nums2: number[], n: number): void {
     let ind1 = 0;
     let ind2 = 0;
 
@@ -20,6 +20,24 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
 
     for (let i = 0; i < m + n; i++) {
         nums1[i] = result[i];
+    }
+}
+
+function merge(nums1: number[], m: number, nums2: number[], n: number): void {
+    let ind1 = m - 1;
+    let ind2 = n - 1;
+    let k = m + n - 1;
+
+    while (ind2 >= 0) {
+        if (ind1 >= 0 && nums1[ind1] > nums2[ind2]) {
+            nums1[k] = nums1[ind1];
+            k--;
+            ind1--;
+        } else  {
+            nums1[k] = nums2[ind2];
+            k--;
+            ind2--;
+        }
     }
 }
 
