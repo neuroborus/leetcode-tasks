@@ -35,6 +35,7 @@
     "medium:longest-substring-without-repeating-characters": "npx ts-node -r tsconfig-paths/register src/tasks/medium/longest-substring-without-repeating-characters",
     "medium:longest-palindromic-substring": "npx ts-node -r tsconfig-paths/register src/tasks/medium/longest-palindromic-substring",
     "medium:maximum-sum-of-distinct-subarrays-with-length-k": "npx ts-node -r tsconfig-paths/register src/tasks/medium/maximum-sum-of-distinct-subarrays-with-length-k",
+    "medium:remove-dups-from-sorted-array-2": "npx ts-node -r tsconfig-paths/register src/tasks/medium/remove-dups-from-sorted-array-2",
     "medium:validate-binary-search-tree": "npx ts-node -r tsconfig-paths/register src/tasks/medium/validate-binary-search-tree",
     "medium:top-k-frequent-elements": "npx ts-node -r tsconfig-paths/register src/tasks/medium/top-k-frequent-elements",
 
