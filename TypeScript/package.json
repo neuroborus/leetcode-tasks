@@ -13,6 +13,7 @@
     "start": "npm run clean && npm run build && npm run start:index",
 
     "easy:add-binary": "npx ts-node -r tsconfig-paths/register src/tasks/easy/add-binary",
+    "easy:best-time-to-buy-and-sell-stock": "npx ts-node -r tsconfig-paths/register src/tasks/easy/best-time-to-buy-and-sell-stock",
     "easy:climbing-stars": "npx ts-node -r tsconfig-paths/register src/tasks/easy/climbing-stars",
     "easy:first-occurrence": "npx ts-node -r tsconfig-paths/register src/tasks/easy/first-occurrence",
     "easy:length-of-last-word": "npx ts-node -r tsconfig-paths/register src/tasks/easy/length-of-last-word",
@@ -30,6 +31,7 @@
     "easy:valid-parenteses": "npx ts-node -r tsconfig-paths/register src/tasks/easy/valid-parenteses",
     "easy:roman": "npx ts-node -r tsconfig-paths/register src/tasks/easy/roman-to-integer",
 
+    "medium:best-time-to-buy-and-sell-stock-2": "npx ts-node -r tsconfig-paths/register src/tasks/medium/best-time-to-buy-and-sell-stock-2",
     "medium:binary-tree-level-observer-travesal": "npx ts-node -r tsconfig-paths/register src/tasks/medium/binary-tree-level-observer-travesal",
     "medium:combination-sum": "npx ts-node -r tsconfig-paths/register src/tasks/medium/combination-sum",
     "medium:kth-largest-element-in-an-array": "npx ts-node -r tsconfig-paths/register src/tasks/medium/kth-largest-element-in-an-array",
