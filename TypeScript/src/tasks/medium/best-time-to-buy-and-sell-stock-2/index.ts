@@ -6,12 +6,13 @@ enum StockState {
 }
 
 function maxProfit(prices: number[]): number {
-
   // Create a 2D array to store dynamic programming values
-  const portfolio = new Array(prices.length).fill(null).map(() => new Array(2).fill(-1));
+  const portfolio = new Array(prices.length)
+    .fill(null)
+    .map(() => new Array(2).fill(-1));
 
   // Recursive function to calculate the maximum profit
-  const calcMaxProfit = (index: number, stockState: StockState) => {
+  const calcMaxProfit = (index: number, stockState: StockState): number => {
     // Base case
     if (index === prices.length) {
       return 0;
@@ -22,24 +23,26 @@ function maxProfit(prices: number[]): number {
       return portfolio[index][stockState];
     }
 
-    let profit;
+    let profit = 0;
 
-    if (stockState === StockState.ReadyToBuy) { // We can buy the stock
+    if (stockState === StockState.ReadyToBuy) {
+      // We can buy the stock
       profit = Math.max(
-          0 + calcMaxProfit(index + 1, StockState.ReadyToBuy),     // Don't buy
-          -prices[index] + calcMaxProfit(index + 1, StockState.ReadyToSell)  // Buy
+        0 + calcMaxProfit(index + 1, StockState.ReadyToBuy), // Don't buy
+        -prices[index] + calcMaxProfit(index + 1, StockState.ReadyToSell) // Buy
       );
     }
 
-    if (stockState === StockState.ReadyToSell) { // We can sell the stock
+    if (stockState === StockState.ReadyToSell) {
+      // We can sell the stock
       profit = Math.max(
-          0 + calcMaxProfit(index + 1, StockState.ReadyToSell),  // Don't sell
-          prices[index] + calcMaxProfit(index + 1, StockState.ReadyToBuy)  // Sell
+        0 + calcMaxProfit(index + 1, StockState.ReadyToSell), // Don't sell
+        prices[index] + calcMaxProfit(index + 1, StockState.ReadyToBuy) // Sell
       );
     }
 
-    return portfolio[index][stockState] = profit;
-  }
+    return (portfolio[index][stockState] = profit);
+  };
 
   if (prices.length === 0) {
     return 0;
@@ -50,6 +53,6 @@ function maxProfit(prices: number[]): number {
   return maxProfit;
 }
 
-_compare(7, maxProfit([7,1,5,3,6,4]));
-_compare(4, maxProfit([1,2,3,4,5]));
-_compare(0, maxProfit([7,6,4,3,1]));
+_compare(7, maxProfit([7, 1, 5, 3, 6, 4]));
+_compare(4, maxProfit([1, 2, 3, 4, 5]));
+_compare(0, maxProfit([7, 6, 4, 3, 1]));

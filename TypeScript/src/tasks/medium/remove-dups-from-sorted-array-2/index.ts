@@ -87,14 +87,12 @@ function removeDuplicates(nums: number[]): number {
   return count;
 }
 
-
-
-const nums1 = [1,1,1,2,2,3];
+const nums1 = [1, 1, 1, 2, 2, 3];
 const got1 = removeDuplicates(nums1) + '\t' + JSON.stringify(nums1);
-const expected1 = '5' + '\t' + JSON.stringify([1,1,2,2,3]);
+const expected1 = '5' + '\t' + JSON.stringify([1, 1, 2, 2, 3]);
 _compare(expected1, got1);
 
-const nums2 = [0,0,1,1,1,1,2,3,3];
+const nums2 = [0, 0, 1, 1, 1, 1, 2, 3, 3];
 const got2 = removeDuplicates(nums2) + '\t' + JSON.stringify(nums2);
-const expected2 = '7' + '\t' + JSON.stringify([0,0,1,1,2,3,3]);
+const expected2 = '7' + '\t' + JSON.stringify([0, 0, 1, 1, 2, 3, 3]);
 _compare(expected2, got2);

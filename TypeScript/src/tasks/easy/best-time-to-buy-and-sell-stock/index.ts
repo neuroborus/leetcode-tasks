@@ -1,6 +1,5 @@
 import { _compare } from '@/logger';
 
-
 function maxProfit(prices: number[]): number {
   let max = -Infinity;
   let delta = 0;
@@ -11,5 +10,5 @@ function maxProfit(prices: number[]): number {
   return delta;
 }
 
-_compare(5, maxProfit([7,1,5,3,6,4]));
-_compare(0, maxProfit([7,6,4,3,1]));
+_compare(5, maxProfit([7, 1, 5, 3, 6, 4]));
+_compare(0, maxProfit([7, 6, 4, 3, 1]));

@@ -34,7 +34,6 @@ function removeDuplicates(nums: number[]): number {
   return mentioned.size;
 }
 
-
 const nums1 = [1, 1, 2];
 const got1 = removeDuplicates(nums1) + '\t' + JSON.stringify(nums1);
 const expected1 = '2' + '\t' + JSON.stringify([1, 2]);
