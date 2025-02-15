@@ -11,6 +11,7 @@ class TreeNode {
   }
 }
 
+/*
 function processNode(node: TreeNode, level: number, result: number[][]) {
   while (result.length - 1 < level) result.push([]); // can be used with if
   result[level].push(node.val);
@@ -19,13 +20,38 @@ function processNode(node: TreeNode, level: number, result: number[][]) {
 }
 
 function levelOrder(root: TreeNode | null): number[][] {
+  // ?: DFS + level tracking. BFS doesn't use recursion usually
   if (!root) return [];
   const result: number[][] = [];
   const level = 0;
   processNode(root, level, result);
 
   return result;
+}*/
+
+function levelOrder(root: TreeNode | null): number[][] {
+  // BFS
+  if (!root) return [];
+
+  const result: number[][] = [];
+  const queue: [TreeNode, number][] = [[root, 0]];
+
+  while (queue.length > 0) {
+    const [node, level] = queue.shift()!;
+
+    if (result.length === level) {
+      result.push([]);
+    }
+
+    result[level].push(node.val);
+
+    if (node.left) queue.push([node.left, level + 1]);
+    if (node.right) queue.push([node.right, level + 1]);
+  }
+
+  return result;
 }
+
 
 const tree = new TreeNode(
   3,

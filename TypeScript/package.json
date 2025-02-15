@@ -50,6 +50,7 @@
     "alghorithms:dijkstra": "npx ts-node -r tsconfig-paths/register src/algorithms/dijkstra.ts",
 
     "examples:buganizer-cycles": "npx ts-node -r tsconfig-paths/register src/examples/buganizer-cycles.ts",
+    "examples:breadth-first-search": "npx ts-node -r tsconfig-paths/register src/examples/breadth-first-search.ts",
 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
