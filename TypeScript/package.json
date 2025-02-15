@@ -34,6 +34,7 @@
     "medium:best-time-to-buy-and-sell-stock-2": "npx ts-node -r tsconfig-paths/register src/tasks/medium/best-time-to-buy-and-sell-stock-2",
     "medium:binary-tree-level-observer-travesal": "npx ts-node -r tsconfig-paths/register src/tasks/medium/binary-tree-level-observer-travesal",
     "medium:combination-sum": "npx ts-node -r tsconfig-paths/register src/tasks/medium/combination-sum",
+    "medium:jump-game": "npx ts-node -r tsconfig-paths/register src/tasks/medium/jump-game",
     "medium:kth-largest-element-in-an-array": "npx ts-node -r tsconfig-paths/register src/tasks/medium/kth-largest-element-in-an-array",
     "medium:longest-substring-without-repeating-characters": "npx ts-node -r tsconfig-paths/register src/tasks/medium/longest-substring-without-repeating-characters",
     "medium:longest-palindromic-substring": "npx ts-node -r tsconfig-paths/register src/tasks/medium/longest-palindromic-substring",
