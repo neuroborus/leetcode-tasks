@@ -1,7 +1,8 @@
 import { _compare } from '@/logger';
 
+/// LOMUTO PARTITION
 // Function to partition the array and return the partition index
-function partition(arr: number[], startInd: number, endInd: number) {
+/*function partition(arr: number[], startInd: number, endInd: number) {
   // Choosing the pivot
   const pivot = arr[endInd];
 
@@ -18,10 +19,39 @@ function partition(arr: number[], startInd: number, endInd: number) {
 
   [arr[i + 1], arr[endInd]] = [arr[endInd], arr[i + 1]]; // Swap pivot to its correct position
   return i + 1; // Return the partition index
+}*/
+
+/// HOARE PARTITION
+// Function to partition the array and return the partition index
+function partition(arr: number[], startInd: number, endInd: number) {
+  const mid = Math.floor((startInd + endInd) / 2);
+  const pivot = arr[mid];
+
+  let left = startInd - 1;
+  let right = endInd + 1;
+
+  while (true) {
+    do {
+      left++;
+    } while (arr[left] < pivot);
+
+    do {
+      right--;
+    } while (arr[right] > pivot);
+
+    if (left >= right) {
+      return right;
+    }
+
+    // Swap elements
+    [arr[left], arr[right]] = [arr[right], arr[left]];
+  }
 }
 
+
+/// LOMUTO - excluded pi
 // The main function that implements QuickSort
-function quickSort(arr: number[], startInd: number, endInd: number) {
+/*function quickSort(arr: number[], startInd: number, endInd: number) {
   if (startInd < endInd) {
     // pi is the partitioning index, arr[pi] is now at the right place
     const pi = partition(arr, startInd, endInd);
@@ -30,7 +60,23 @@ function quickSort(arr: number[], startInd: number, endInd: number) {
     quickSort(arr, startInd, pi - 1);
     quickSort(arr, pi + 1, endInd);
   }
+}*/
+
+
+/// HOARE - included pi on the left side
+// The main function that implements QuickSort
+function quickSort(arr: number[], startInd: number, endInd: number) {
+  if (startInd < endInd) {
+    // pi is the partitioning index, arr[pi] is now at the right place
+    const pi = partition(arr, startInd, endInd);
+
+    // Separately sort elements before partition and after partition
+    quickSort(arr, startInd, pi);
+    quickSort(arr, pi + 1, endInd);
+  }
 }
+
+
 
 function sort(array: number[]) {
   const arr = Array.from(array);
