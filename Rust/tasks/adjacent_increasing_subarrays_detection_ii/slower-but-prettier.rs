@@ -30,10 +30,7 @@ impl Solution {
 
         max_run = cmp::max(max_run, run);
         let half = max_run / 2;
-        if half > max_size {
-            return half as i32;
-        }
 
-        return max_size as i32;
+        return cmp::max(half, max_size) as i32;
     }
 }
